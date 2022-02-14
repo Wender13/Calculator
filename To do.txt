@@ -1,7 +1,8 @@
 
-Permitir uso de números não inteiros()
-Se apertar outro operador após dar o primeiro e segundo valor, será dado o resultado()
+Permitir uso de números não inteiros(X)
+Se apertar outro operador após dar o primeiro e segundo valor, será dado o resultado(X)
 Adicionar dark mode() #b0bac5
+Permitir trocar o operador() 
 Corrigir erro visual dos números grandes()
 Permitir uso do teclado na calculadora()
 Tornar a aplicação responsiva()
