@@ -1,0 +1,7 @@
+
+Permitir uso de números não inteiros()
+Se apertar outro operador após dar o primeiro e segundo valor, será dado o resultado()
+Adicionar dark mode() #b0bac5
+Corrigir erro visual dos números grandes()
+Permitir uso do teclado na calculadora()
+Tornar a aplicação responsiva()

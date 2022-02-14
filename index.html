@@ -9,32 +9,34 @@
     <link rel="icon" type="image/png" sizes="32x32" href="Favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="Favicon/favicon-16x16.png">
     <link rel="manifest" href="Favicon/site.webmanifest">
+    <script src="script.js" defer></script>
     <title>Calculator</title>
 </head>
 <body>
     <div id="CalculatorBody">
-        <div id="Screen">
-            Screen
-        </div>
+        <span id="Screen">
+            
+        </span>
         <div id="Buttons">
-            <div class="Buttons SpecialsButtons" id="Delete">Delete</div>
-            <div class="Buttons SpecialsButtons">AC</div>
-            <div class="Buttons OperatorsButtons">/</div>
-            <div class="Buttons NumericsButtons">7</div>
-            <div class="Buttons NumericsButtons">8</div>
-            <div class="Buttons NumericsButtons">9</div>
-            <div class="Buttons OperatorsButtons">*</div>
-            <div class="Buttons NumericsButtons">4</div>
-            <div class="Buttons NumericsButtons">5</div>
-            <div class="Buttons NumericsButtons">6</div>
-            <div class="Buttons OperatorsButtons">-</div>
-            <div class="Buttons NumericsButtons">1</div>
-            <div class="Buttons NumericsButtons">2</div>
-            <div class="Buttons NumericsButtons">3</div>
-            <div class="Buttons OperatorsButtons">+</div>
-            <div class="Buttons NumericsButtons" id="Num0">0</div>
-            <div class="Buttons NumericsButtons">.</div>
-            <div class="Buttons OperatorsButtons">=</div>
+            <button class="SpecialsButtons" id="Dark_Mode" onclick="ChangeDarkMode()">Dark mode</button>
+            <button class="SpecialsButtons" id="Delete" onclick="RemoveLastNumber()">Delete</button>
+            <button class="SpecialsButtons" onclick="ClearAll()">AC</button>
+            <button class="OperatorsButtons" onclick="SetOperator('/')">/</button>
+            <button class="NumericsButtons" onclick="AddValue(7)">7</button>
+            <button class="NumericsButtons" onclick="AddValue(8)">8</button>
+            <button class="NumericsButtons" onclick="AddValue(9)">9</button>
+            <button class="OperatorsButtons" onclick="SetOperator('*')">*</button>
+            <button class="NumericsButtons" onclick="AddValue(4)">4</button>
+            <button class="NumericsButtons" onclick="AddValue(5)">5</button>
+            <button class="NumericsButtons" onclick="AddValue(6)">6</button>
+            <button class="OperatorsButtons" onclick="SetOperator('-')">-</button>
+            <button class="NumericsButtons" onclick="AddValue(1)">1</button>
+            <button class="NumericsButtons" onclick="AddValue(2)">2</button>
+            <button class="NumericsButtons" onclick="AddValue(3)">3</button>
+            <button class="OperatorsButtons" onclick="SetOperator('+')">+</button>
+            <button class="NumericsButtons" id="Num0" onclick="AddValue(0)">0</button>
+            <button class="NumericsButtons" onclick="AddValue('.')">.</button>
+            <button class="OperatorsButtons" onclick="Result()">=</button>
         </div>
     </div>
 </body>
