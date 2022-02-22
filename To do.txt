@@ -1,8 +1,0 @@
-Permitir uso de números não inteiros(x);
-Se apertar outro operador após dar o primeiro e segundo valor, será dado o resultado(x);
-Adicionar dark mode(x);
-Permitir uso do teclado na calculadora(x);
-Adicionar e configurar espaço para mostrar a equação e o número atual(x);
-Corrigir erro da troca de operador(x);
-Corrigir erro visual dos números grandes();
-Tornar a aplicação responsiva();
