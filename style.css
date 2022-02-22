@@ -55,6 +55,17 @@ html, body {
     text-align: end;
     padding: 8px;
     font-size: 2.25em;
+    display: flex;
+    flex-direction: column;
+}
+
+#Result {
+    font-size: .45em;
+}
+
+#ActualNumber {
+    max-width: 100%;
+    font-size: .6em;
 }
 
 #Buttons {

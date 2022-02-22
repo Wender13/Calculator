@@ -1,7 +1,8 @@
 // Variables
 
 let DarkMode = false
-let DisplayValue = document.getElementById('Screen')
+let DisplayValue = document.getElementById('ActualNumber')
+let ResultScreen = document.getElementById('Result')
 let ActualNumericValue = '0'
 let ActualOperator = 'none'
 let FirstValue = '0'
@@ -12,24 +13,23 @@ let result = '0'
 
 function add(a,b){
     result = Number(a) + Number(b)
-    DisplayValue.textContent = result
+    ResultScreen.textContent = result
 }
 
 function subtract(a,b){
     result = Number(a) - Number(b)
-    DisplayValue.textContent = result
+    ResultScreen.textContent = result
 }
 
 function multiply(a,b){
     result =  Number(a) * Number(b)
-    DisplayValue.textContent = result
+    ResultScreen.textContent = result
 }
 
 function divide(a,b){
     result = Number(a) / Number(b)
-    DisplayValue.textContent = result
+    ResultScreen.textContent = result
 }
-
 
 // DOM functions 
 
@@ -63,6 +63,7 @@ function AddValue(value) {
 function ClearAll(){
     ActualNumericValue = '0'
     DisplayValue.textContent = ActualNumericValue
+    ResultScreen.textContent = ''
     ActualOperator = 'none'
     FirstValue = '0'
     SecondValue = '0'
@@ -70,13 +71,20 @@ function ClearAll(){
 }
 
 function SetOperator(operator) {
+    let String = ResultScreen.textContent
+    let Length = String.length - 1
     if (FirstValue != 0 && ActualNumericValue != 0) {
         Result()
+    } else if (FirstValue != 0 && isNaN(String[Length]) == true) {
+        ActualOperator = operator
+        const newString = String.replace(String[Length], '')
+        ResultScreen.textContent = newString + operator
     } else {
         ActualOperator = operator
         FirstValue = ActualNumericValue
         ActualNumericValue = '0'
         DisplayValue.textContent = ActualNumericValue
+        ResultScreen.textContent = FirstValue + ' ' + operator
     }
 }
 
@@ -104,6 +112,7 @@ function Result() {
     FirstValue = '0' 
     SecondValue = '0'
     result = '0'
+    DisplayValue.textContent = ''
 }
 
 // Dark mode
