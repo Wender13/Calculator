@@ -108,10 +108,26 @@ function Result() {
 
 // Dark mode
 
-/*
 function ChangeDarkMode() {
+    let CalculatorBody = document.getElementById('CalculatorBody')
+    let CalculatorScreen = document.getElementById('Screen')
+    let Message = document.getElementById('Message')
+    if (DarkMode == false){
+        DarkMode = true
+        document.body.style.backgroundColor = 'rgb(27, 27, 27)'
+        CalculatorBody.style.backgroundColor = 'rgb(27, 27, 27)'
+        CalculatorScreen.style.backgroundColor = 'rgb(195, 194, 194)'
+        CalculatorScreen.style.color = 'black'
+        Message.style.color = 'white'
+    } else if (DarkMode == true){
+        DarkMode = false
+        document.body.style.backgroundColor = '#b0bac5'
+        CalculatorBody.style.backgroundColor = '#b0bac5'
+        CalculatorScreen.style.backgroundColor = 'rgb(71, 71, 71)'
+        CalculatorScreen.style.color = 'white'
+        Message.style.color = 'black'
+    }
 }
-*/
 
 // Using the keyboard
 
@@ -122,6 +138,9 @@ function Keyboard(event) {
         AddValue(event.key)
     } else {
         switch (event.key) {
+            case 'd':
+                ChangeDarkMode();
+                break;
             case '/':
                 SetOperator(event.key)
                 break;

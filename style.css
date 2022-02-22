@@ -8,15 +8,15 @@
 html, body {
     width: 100vw;
     height: 100vh;
-    background: rgb(27, 27, 27);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: #b0bac5;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 #CalculatorBody {
     padding: 16px;
-    background: rgb(29, 29, 29);
+    background: #b0bac5;
     border: 4px solid black;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.700);
     height: 90vh;
@@ -27,10 +27,25 @@ html, body {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    grid-row: 2/4;
+    grid-column: 3/3;
+}
+
+#Message {
+    width: max-content;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    font-size: 1.15em;
+    font-weight: bold;
+    margin: 16px;
+    grid-row: 2/4;
+    grid-column: 4/5;
 }
 
 #Screen {
-    background: gray;
+    background: rgb(71, 71, 71);
     border: 2px solid black;
     box-shadow: 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.700);
     color: white;
@@ -73,7 +88,8 @@ button:active{
 }
 
 .NumericsButtons {
-    background: gray;
+    background: rgb(71, 71, 71);
+    color: white;
 }
 
 #Dark_Mode, #Delete {
