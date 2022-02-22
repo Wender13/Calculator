@@ -112,3 +112,45 @@ function Result() {
 function ChangeDarkMode() {
 }
 */
+
+// Using the keyboard
+
+document.addEventListener('keydown', Keyboard)
+
+function Keyboard(event) {
+    if (isFinite(event.key)){
+        AddValue(event.key)
+    } else {
+        switch (event.key) {
+            case '/':
+                SetOperator(event.key)
+                break;
+            case '*':
+                SetOperator(event.key)
+                break;
+            case '-':
+                SetOperator(event.key)
+                break;
+            case '+':
+                SetOperator(event.key)
+                break;
+            case 'Backspace':
+                RemoveLastNumber()
+                break;
+            case 'Delete':
+                ClearAll()
+                break;
+            case 'Enter':
+                Result()
+                break;
+            case '.':
+                AddValue(event.key)
+                break;
+            case ',':
+                AddValue('.')
+                break;
+            default:
+                break;
+        }
+    }
+}
